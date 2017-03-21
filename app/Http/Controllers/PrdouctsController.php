@@ -13,9 +13,7 @@ class PrdouctsController extends Controller
      */
     public function index()
     {
-        //
         $products_data = json_decode(file_get_contents('products.json'),true);
-        //dd($products_data);
         return view('welcome', compact('products_data'));
     }
 
